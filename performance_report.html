@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>496Claw 財務分析室 — 歷史績效報告</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.1.0/dist/chartjs-plugin-annotation.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.2.0/dist/chartjs-plugin-zoom.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, sans-serif; background: #0d1117; color: #c9d1d9; padding: 20px; }
+  h1 { text-align: center; margin: 20px 0; color: #58a6ff; }
+  .subtitle { text-align: center; color: #8b949e; margin-bottom: 30px; }
+  .stock-card { background: #161b22; border-radius: 12px; padding: 24px; margin-bottom: 30px; border: 1px solid #30363d; }
+  .stock-card h2 { color: #f0f6fc; margin-bottom: 12px; }
+  .stats { display: flex; gap: 20px; margin-bottom: 16px; flex-wrap: wrap; }
+  .stat { background: #21262d; padding: 6px 14px; border-radius: 6px; font-size: 14px; }
+  .accuracy b { color: #58a6ff; font-size: 18px; }
+  .legend { display: flex; gap: 16px; margin: 12px 0; flex-wrap: wrap; font-size: 13px; }
+  .legend-item { display: flex; align-items: center; gap: 4px; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .dot.green { background: #00c853; }
+  .dot.yellow { background: #ffc107; }
+  .dot.red { background: #ef5350; }
+  .dot.check { background: #00c853; border: 2px solid #fff; }
+  .dot.cross { background: #b71c1c; border: 2px solid #fff; }
+  .history-table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 13px; }
+  .history-table th { background: #21262d; padding: 8px; text-align: left; }
+  .history-table td { padding: 6px 8px; border-bottom: 1px solid #21262d; }
+  .history-table tr.correct { background: rgba(0,200,83,0.08); }
+  .history-table tr.wrong { background: rgba(183,28,28,0.08); }
+  canvas { margin: 10px 0; cursor: grab; }
+  canvas:active { cursor: grabbing; }
+  .chart-controls { display: flex; align-items: center; gap: 12px; margin-top: 12px; }
+  .reset-btn { background: #21262d; color: #58a6ff; border: 1px solid #30363d; padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 13px; }
+  .reset-btn:hover { background: #30363d; }
+  .zoom-hint { color: #484f58; font-size: 12px; }
+  .generated { text-align: center; color: #484f58; margin-top: 30px; font-size: 12px; }
+</style>
+</head>
+<body>
+<h1>📊 496Claw 財務分析室 — 歷史績效報告</h1>
+<p class="subtitle">評等 vs 實際股價走勢 | 生成時間: 2026-03-26 13:13</p>
+
+    <div class="stock-card">
+      <h2>新應材 (4749.TWO)</h2>
+      <div class="stats">
+        <span class="stat">分析次數: <b>8</b></span>
+        <span class="stat">已驗證: <b>7</b></span>
+        <span class="stat">正確: <b>6</b></span>
+        <span class="stat accuracy">準確率: <b>85.7%</b></span>
+      </div>
+      <div class="chart-controls">
+        <button id="reset-4749-TWO" class="reset-btn">🔄 重置縮放</button>
+        <span class="zoom-hint">滾輪縮放 | 拖曳平移 | Shift+拖曳框選</span>
+      </div>
+      <canvas id="chart-4749-TWO" height="300"></canvas>
+      <div class="legend">
+        <span class="legend-item"><span class="dot green"></span> STRONG_BUY / BUY</span>
+        <span class="legend-item"><span class="dot yellow"></span> HOLD</span>
+        <span class="legend-item"><span class="dot red"></span> SELL / STRONG_SELL</span>
+        <span class="legend-item"><span class="dot check"></span> ✅ 正確</span>
+        <span class="legend-item"><span class="dot cross"></span> ❌ 錯誤</span>
+      </div>
+      <table class="history-table">
+        <tr><th>日期</th><th>價格</th><th>評等</th><th>Q分</th><th>C分</th><th>隔日</th><th>結果</th></tr>
+        <tr class="correct"><td>2026-03-25</td><td>896</td><td>HOLD</td><td>0</td><td>0</td><td>+0.0%</td><td>✅</td></tr>
+<tr class="correct"><td>2026-03-25</td><td>896</td><td>HOLD</td><td>1.8</td><td>0</td><td>+0.0%</td><td>✅</td></tr>
+<tr class="correct"><td>2026-03-25</td><td>896</td><td>HOLD</td><td>3.8</td><td>0</td><td>+0.0%</td><td>✅</td></tr>
+<tr class="correct"><td>2026-03-25</td><td>896</td><td>HOLD</td><td>-0.3</td><td>0</td><td>+0.0%</td><td>✅</td></tr>
+<tr class="correct"><td>2026-03-25</td><td>896</td><td>HOLD</td><td>-0.1</td><td>0</td><td>+0.0%</td><td>✅</td></tr>
+<tr class="correct"><td>2026-03-25</td><td>896</td><td>HOLD</td><td>0.5</td><td>0</td><td>+0.0%</td><td>✅</td></tr>
+<tr class="wrong"><td>2026-03-25</td><td>896</td><td>BUY</td><td>4.6</td><td>5</td><td>+0.0%</td><td>❌</td></tr>
+<tr class=""><td>2026-03-26</td><td>896</td><td>HOLD</td><td>0.7</td><td>1</td><td>⏳</td><td>⏳</td></tr>
+      </table>
+    </div>
+    <script>
+    (function() {
+      const ctx = document.getElementById('chart-4749-TWO').getContext('2d');
+      const prices = ["2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26"];
+      const values = [875.0, 859.0, 863.0, 896.0, 890.0];
+      const markers = [{"date": "2026-03-25", "price": 896, "rating": "HOLD", "quant_score": 0, "chairman_score": 0, "next_price": 896, "return_pct": 0, "correct": true}, {"date": "2026-03-25", "price": 896, "rating": "HOLD", "quant_score": 1.8, "chairman_score": 0, "next_price": 896, "return_pct": 0, "correct": true}, {"date": "2026-03-25", "price": 896, "rating": "HOLD", "quant_score": 3.8, "chairman_score": 0, "next_price": 896, "return_pct": 0, "correct": true}, {"date": "2026-03-25", "price": 896, "rating": "HOLD", "quant_score": -0.3, "chairman_score": 0, "next_price": 896, "return_pct": 0, "correct": true}, {"date": "2026-03-25", "price": 896, "rating": "HOLD", "quant_score": -0.1, "chairman_score": 0, "next_price": 896, "return_pct": 0, "correct": true}, {"date": "2026-03-25", "price": 896, "rating": "HOLD", "quant_score": 0.5, "chairman_score": 0, "next_price": 896, "return_pct": 0, "correct": true}, {"date": "2026-03-25", "price": 896, "rating": "BUY", "quant_score": 4.6, "chairman_score": 5, "next_price": 896, "return_pct": 0, "correct": false}, {"date": "2026-03-26", "price": 896, "rating": "HOLD", "quant_score": 0.7, "chairman_score": 1}];
+
+      const ratingColor = {'STRONG_BUY': '#00c853', 'BUY': '#66bb6a', 'HOLD': '#ffc107', 'SELL': '#ef5350', 'STRONG_SELL': '#b71c1c'};
+
+      const annotations = markers.map(m => ({
+        type: 'point',
+        xValue: m.date,
+        yValue: m.price,
+        backgroundColor: ratingColor[m.rating] || '#999',
+        borderColor: m.correct === true ? '#00c853' : (m.correct === false ? '#b71c1c' : '#999'),
+        borderWidth: m.correct !== undefined ? 3 : 1,
+        radius: 8,
+        label: {
+          display: true,
+          content: m.rating.replace('STRONG_', 'S').replace('BUY', 'B').replace('SELL', 'S').replace('HOLD', 'H'),
+          font: { size: 9 },
+          position: 'top',
+        }
+      }));
+
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: prices,
+          datasets: [{
+            label: '新應材 股價',
+            data: values,
+            borderColor: '#42a5f5',
+            backgroundColor: 'rgba(66,165,245,0.1)',
+            fill: true,
+            tension: 0.3,
+            pointRadius: 0,
+          }]
+        },
+        options: {
+          responsive: true,
+          interaction: { mode: 'nearest', intersect: false },
+          plugins: {
+            annotation: { annotations },
+            tooltip: { mode: 'index' },
+            zoom: {
+              pan: {
+                enabled: true,
+                mode: 'x',
+              },
+              zoom: {
+                wheel: { enabled: true, modifierKey: null },
+                pinch: { enabled: true },
+                drag: {
+                  enabled: true,
+                  backgroundColor: 'rgba(88,166,255,0.15)',
+                  borderColor: '#58a6ff',
+                  borderWidth: 1,
+                  modifierKey: 'shift',
+                },
+                mode: 'x',
+              },
+              limits: {
+                x: { minRange: 5 },
+              },
+            },
+          },
+          scales: {
+            x: { display: true, title: { display: true, text: '日期' } },
+            y: { display: true, title: { display: true, text: '價格' } },
+          }
+        }
+      });
+      // Reset zoom button
+      document.getElementById('reset-4749-TWO').addEventListener('click', function() {
+        Chart.getChart(ctx.canvas).resetZoom();
+      });
+    })();
+    </script>
+    
+    <div class="stock-card">
+      <h2>黃金 (GC=F)</h2>
+      <div class="stats">
+        <span class="stat">分析次數: <b>3</b></span>
+        <span class="stat">已驗證: <b>3</b></span>
+        <span class="stat">正確: <b>3</b></span>
+        <span class="stat accuracy">準確率: <b>100.0%</b></span>
+      </div>
+      <div class="chart-controls">
+        <button id="reset-GC=F" class="reset-btn">🔄 重置縮放</button>
+        <span class="zoom-hint">滾輪縮放 | 拖曳平移 | Shift+拖曳框選</span>
+      </div>
+      <canvas id="chart-GC=F" height="300"></canvas>
+      <div class="legend">
+        <span class="legend-item"><span class="dot green"></span> STRONG_BUY / BUY</span>
+        <span class="legend-item"><span class="dot yellow"></span> HOLD</span>
+        <span class="legend-item"><span class="dot red"></span> SELL / STRONG_SELL</span>
+        <span class="legend-item"><span class="dot check"></span> ✅ 正確</span>
+        <span class="legend-item"><span class="dot cross"></span> ❌ 錯誤</span>
+      </div>
+      <table class="history-table">
+        <tr><th>日期</th><th>價格</th><th>評等</th><th>Q分</th><th>C分</th><th>隔日</th><th>結果</th></tr>
+        <tr class="correct"><td>2026-03-25</td><td>4549.6</td><td>HOLD</td><td>0</td><td>0</td><td>-0.8%</td><td>✅</td></tr>
+<tr class="correct"><td>2026-03-25</td><td>4557.1</td><td>HOLD</td><td>0</td><td>0</td><td>-1.0%</td><td>✅</td></tr>
+<tr class="correct"><td>2026-03-25</td><td>4546.5</td><td>HOLD</td><td>-1.2</td><td>0</td><td>-0.7%</td><td>✅</td></tr>
+      </table>
+    </div>
+    <script>
+    (function() {
+      const ctx = document.getElementById('chart-GC=F').getContext('2d');
+      const prices = ["2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26"];
+      const values = [4570.4, 4404.1, 4399.3, 4549.8, 4515.6];
+      const markers = [{"date": "2026-03-25", "price": 4549.6, "rating": "HOLD", "quant_score": 0, "chairman_score": 0, "next_price": 4512.1, "return_pct": -0.82, "correct": true}, {"date": "2026-03-25", "price": 4557.1, "rating": "HOLD", "quant_score": 0, "chairman_score": 0, "next_price": 4512.2, "return_pct": -0.99, "correct": true}, {"date": "2026-03-25", "price": 4546.5, "rating": "HOLD", "quant_score": -1.2, "chairman_score": 0, "next_price": 4513.5, "return_pct": -0.73, "correct": true}];
+
+      const ratingColor = {'STRONG_BUY': '#00c853', 'BUY': '#66bb6a', 'HOLD': '#ffc107', 'SELL': '#ef5350', 'STRONG_SELL': '#b71c1c'};
+
+      const annotations = markers.map(m => ({
+        type: 'point',
+        xValue: m.date,
+        yValue: m.price,
+        backgroundColor: ratingColor[m.rating] || '#999',
+        borderColor: m.correct === true ? '#00c853' : (m.correct === false ? '#b71c1c' : '#999'),
+        borderWidth: m.correct !== undefined ? 3 : 1,
+        radius: 8,
+        label: {
+          display: true,
+          content: m.rating.replace('STRONG_', 'S').replace('BUY', 'B').replace('SELL', 'S').replace('HOLD', 'H'),
+          font: { size: 9 },
+          position: 'top',
+        }
+      }));
+
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: prices,
+          datasets: [{
+            label: '黃金 股價',
+            data: values,
+            borderColor: '#42a5f5',
+            backgroundColor: 'rgba(66,165,245,0.1)',
+            fill: true,
+            tension: 0.3,
+            pointRadius: 0,
+          }]
+        },
+        options: {
+          responsive: true,
+          interaction: { mode: 'nearest', intersect: false },
+          plugins: {
+            annotation: { annotations },
+            tooltip: { mode: 'index' },
+            zoom: {
+              pan: {
+                enabled: true,
+                mode: 'x',
+              },
+              zoom: {
+                wheel: { enabled: true, modifierKey: null },
+                pinch: { enabled: true },
+                drag: {
+                  enabled: true,
+                  backgroundColor: 'rgba(88,166,255,0.15)',
+                  borderColor: '#58a6ff',
+                  borderWidth: 1,
+                  modifierKey: 'shift',
+                },
+                mode: 'x',
+              },
+              limits: {
+                x: { minRange: 5 },
+              },
+            },
+          },
+          scales: {
+            x: { display: true, title: { display: true, text: '日期' } },
+            y: { display: true, title: { display: true, text: '價格' } },
+          }
+        }
+      });
+      // Reset zoom button
+      document.getElementById('reset-GC=F').addEventListener('click', function() {
+        Chart.getChart(ctx.canvas).resetZoom();
+      });
+    })();
+    </script>
+    
+<p class="generated">Generated by 496Claw Financial Analysis RAG System</p>
+</body>
+</html>
