@@ -66,11 +66,11 @@
   <div class="scores">
     <div class="score-box">
       <div class="label">Quant Score</div>
-      <div class="value negative">-2.1</div>
+      <div class="value negative">-3</div>
     </div>
     <div class="score-box">
       <div class="label">Chairman Score</div>
-      <div class="value neutral">0</div>
+      <div class="value negative">-4</div>
     </div>
     <div class="score-box">
       <div class="label">歷史準確率</div>
@@ -89,20 +89,20 @@
       <div class="card">
         <h3>Thompson Sampling 權重</h3>
         <div class="thompson-bar">
-          <div style="width:29.1%;background:#58a6ff">小克勞 29%</div>
-          <div style="width:26.4%;background:#f97583">小龍蝦 26%</div>
-          <div style="width:20.7%;background:#d2a8ff">小飛俠 21%</div>
-          <div style="width:23.7%;background:#3fb950">阿德 24%</div>
+          <div style="width:28.9%;background:#58a6ff">小克勞 29%</div>
+          <div style="width:24.2%;background:#f97583">小龍蝦 24%</div>
+          <div style="width:23.6%;background:#d2a8ff">小飛俠 24%</div>
+          <div style="width:23.4%;background:#3fb950">阿德 23%</div>
         </div>
-        <div style="margin-top: 12px;">          <div class="stat"><span>小克勞</span><span>勝率 53%（741 次）</span></div>
-          <div class="stat"><span>小龍蝦</span><span>勝率 53%（741 次）</span></div>
-          <div class="stat"><span>小飛俠</span><span>勝率 52%（741 次）</span></div>
-          <div class="stat"><span>阿德</span><span>勝率 52%（762 次）</span></div>
+        <div style="margin-top: 12px;">          <div class="stat"><span>小克勞</span><span>勝率 53%（753 次）</span></div>
+          <div class="stat"><span>小龍蝦</span><span>勝率 53%（753 次）</span></div>
+          <div class="stat"><span>小飛俠</span><span>勝率 52%（753 次）</span></div>
+          <div class="stat"><span>阿德</span><span>勝率 52%（777 次）</span></div>
         </div>
       </div>
       <div class="card">
         <h3>數據覆蓋</h3>
-        <div class="stat"><span>歷史分析</span><span>19 筆</span></div>
+        <div class="stat"><span>歷史分析</span><span>22 筆</span></div>
         <div class="stat"><span>已驗證</span><span>18 筆</span></div>
         <div class="stat"><span>準確率</span><span>44%</span></div>
         <div class="stat"><span>微調數據</span><span>讀取中...</span></div>
@@ -118,15 +118,15 @@
     <div class="card" style="margin-top:16px"><h3>RAG 歷史經驗</h3><pre style="white-space:pre-wrap;color:var(--muted);font-size:13px;">📚 **RAG 歷史經驗**
 
 相似情境（5 筆，Hybrid Search + 時間衰減）：
-❌ 2026-03-25: RSI41.6 → BUY，隔日 0% [近90%]
-❌ 2026-03-25: RSI41.6 → BUY，隔日 0% [近90%]
-✅ 2026-03-27: RSI41.8 → HOLD，隔日 0% [近94%]
-✅ 2026-03-27: RSI41.8 → HOLD，隔日 0% [近94%]
-✅ 2026-03-27: RSI41.8 → HOLD，隔日 0% [近94%]
-📊 相似情境勝率：60%
+❌ 2026-03-25: RSI41.6 → BUY，隔日 0% [近88%]
+❌ 2026-03-25: RSI41.6 → BUY，隔日 0% [近88%]
+❌ 2026-03-29: RSI41.8 → SELL，隔日 0% [近97%]
+❌ 2026-03-29: RSI41.8 → SELL，隔日 0% [近97%]
+❌ 2026-03-29: RSI41.8 → SELL，隔日 0% [近97%]
+📊 相似情境勝率：0%
 
 技術形態匹配（11 筆）：
-勝率 55% | 平均報酬 +0.94%
+勝率 45% | 平均報酬 +0.23%
 </pre></div>
   </div>
 </div>
@@ -141,20 +141,20 @@
       <h3>投票 Scorecard</h3>
       <table class="vote-table">
         <tr><th></th><th>技術</th><th>基本面</th><th>情緒</th><th>🎲 權重</th></tr>
-        <tr><td><strong>小克勞</strong></td><td><span class="negative">-7</span></td><td><span class="negative">-2</span></td><td><span class="negative">-7</span></td><td>29.1%</td></tr>
-        <tr><td><strong>小龍蝦</strong></td><td><span class="negative">-6</span></td><td><span class="positive">+6</span></td><td><span class="neutral">0</span></td><td>26.4%</td></tr>
-        <tr><td><strong>小飛俠</strong></td><td><span class="negative">-7</span></td><td><span class="neutral">0</span></td><td><span class="neutral">0</span></td><td>20.7%</td></tr>
-        <tr><td><strong>阿德</strong></td><td><span class="negative">-6</span></td><td><span class="positive">+6</span></td><td><span class="negative">-5</span></td><td>23.7%</td></tr>
-        <tr style="border-top:2px solid var(--border)"><td><strong>加權</strong></td><td><strong>-6.5</strong></td><td><strong>2.4</strong></td><td><strong>-3.2</strong></td><td></td></tr>
+        <tr><td><strong>小克勞</strong></td><td><span class="negative">-7</span></td><td><span class="positive">+4</span></td><td><span class="negative">-6</span></td><td>28.9%</td></tr>
+        <tr><td><strong>小龍蝦</strong></td><td><span class="negative">-7</span></td><td><span class="positive">+2</span></td><td><span class="negative">-8</span></td><td>24.2%</td></tr>
+        <tr><td><strong>小飛俠</strong></td><td><span class="negative">-7</span></td><td><span class="positive">+5</span></td><td><span class="negative">-6</span></td><td>23.6%</td></tr>
+        <tr><td><strong>阿德</strong></td><td><span class="negative">-7</span></td><td><span class="positive">+3</span></td><td><span class="negative">-8</span></td><td>23.4%</td></tr>
+        <tr style="border-top:2px solid var(--border)"><td><strong>加權</strong></td><td><strong>-7</strong></td><td><strong>3.5</strong></td><td><strong>-7</strong></td><td></td></tr>
       </table>
     </div>
     <div class="card" style="margin-bottom:16px">
       <h3>Executive Summary</h3>
-      <div class="conclusion-text">## Executive Summary｜量化分 -2.1｜SELL<br><br>---<br><br>**事實重點**<br><br>- **技術面全面破線**：現價 865 跌破 5MA(874)、10MA(893)、20MA(918)，MACD 柱狀 -9.08 創近期最深，RSI 41.8 接近超賣但尚未形成反彈訊號<br>- **法人三箭齊賣**：三大法人單日合計賣超 -418,890 股，外資連賣 2 天、投信連賣 3 天；美林單筆賣超 -288,000 股主導賣壓，高盛、野村各砍 -66,000 / -54,000<br>- **賣超集中度懸殊**：賣超集中度 30.5% vs 買超集中度僅 9.8%，摩根士丹利逆勢買超 +84,628 股為唯一亮點，但難撼大局<br>- **基本面是全場最強支撐**：2月營收 44,576 萬、月增 +21.47%；Forward PE 36.99 對比現值 PE 76.3，EPS 成長 36%、季增 51.1%，數字具說服力<br>- **外部環境偏空**：TAIFEX P/C 未平倉比 131.17% 持續走高（散戶大量避險），SOX 半導體 5 日累跌 -2.78%，台股上行阻力短期難消<br><br>---<br><br>**為何給 -2.1 分**<br><br>本次評分由三位分析師加權合成，權重依歷史準確率動態調整：<br><br>- **小克勞（技術面）-6.5 × 31% = -2.0**：價格位於四條均線之下、MACD 動能急速惡化、量比僅 0.47x 顯示縮量下跌，短線無止跌跡象，技術面打出本輪最低分<br>- **小龍蝦（基本面）+2.4 × 38% = +0.9**：營收動能強、EPS 預期大幅跳升、三季連續正向驚喜，基本面撐起評分唯一正向貢獻<br>- **小飛俠（情緒面）-3.2 × 31% = -1.0**：P/C 比持續升溫、外資分點集中賣出、SOX 外圍走弱，市場情緒短期難以扭轉<br><br>三項合計 **-2.1**，技術與情緒面的雙重壓力蓋過基本面支撐，維持 SELL 評級。</div>
+      <div class="conclusion-text">## Executive Summary｜阿德觀點<br><br>**事實重點**<br><br>1. **價格跌破布林下軌邊緣，短線技術全面走弱**——現價 820 低於 5MA（866.2）、10MA（882）、20MA（913）三線壓制，20 日跌幅 -10.09%；MACD 柱狀 -11.79 為近期最深，趨勢加速惡化。<br><br>2. **RSI 35.2 逼近超賣，但尚未觸底反彈訊號**——布林下軌 818.01 僅距現價 2 元，技術上具短暫支撐意義，惟量比僅 0.77x，缺乏承接力道。<br><br>3. **法人今日合計賣超 -710,335 股，摩根士丹利單日拋出 -355,000 股**——外資連賣 3 天、投信連賣 4 天；賣超集中度高達 37.3%，買超集中度僅 4%，籌碼嚴重失衡。<br><br>4. **基本面是唯一亮點：2/26 月營收 44,576 萬 MoM +21.47% 創近半年新高**——Forward EPS 23.385（季增 +51.1%），Forward PE 壓縮至 35.07，若 AI 需求持續兌現，估值修復空間確實存在。<br><br>5. **市場情緒偏空，SOX 半導體 5 日 -2.78%，P/C 未平倉比 122.29%**——散戶避險部位高，TAIFEX 期權結構顯示整體市場風險胃納收縮，個股難以獨走。<br><br>---<br><br>**為何給 -3 分**<br><br>本次量化分 **-3** 來自三個維度的加權合成：<br><br>- **技術面 -7（小克勞）× 31% = -2.17**：價格跌破所有均線，MACD 持續惡化，RSI 雖接近超賣但未見底部背離，布林帶收窄後向下突破，短線無止跌依據。<br><br>- **基本面 +3.5（小龍蝦）× 38% = +1.33**：2 月營收跳增、EPS 成長 36%、Forward PE 合理，是唯一正貢獻；但現股 PE 72.37 偏高，且最近一季 EPS 小幅 miss（-3.4%），故未給滿分。<br><br>- **情緒面 -7（小飛俠）× 31% = -2.17**：外資、投信同步連續賣超，摩根士丹利與美林大量出清，P/C 比偏空，SOX 拖累半導體族群整體情緒，散戶融資亦未見積極加碼。<br><br>> ⚠️ 權重依歷史準確率動態調整（基本面略高於技術/情緒）。基本面尚未支撐股價，籌碼面壓力短期難以消化，建議觀望。</div>
     </div>
     <div class="card">
       <h3>主席結論</h3>
-      <div class="conclusion-text">HOLD<br>CHAIRMAN_SCORE: 0<br><br>▸ 進場區間：855 - 872<br>▸ 停損：833（收盤跌破即出，無條件執行）<br>▸ 中線目標：918（20MA 回補）<br>▸ 短線目標：887（03-26 收盤前壓）<br>▸ 理由：法人賣超訊號確實，美林單日 -28.8 萬股動機未明，技術面全面破線，空方論據紮實。然而歷史回饋明確指出：本團隊 SELL 呼聲準確率近乎為零（近 7 次 SELL 中 4 次錯誤），HOLD 反而兩次命中；加上全員存在系統性偏空偏差（-0.9 至 -1.7），過度看空已是已知錯誤模式。基本面 2 月營收年增 40.6%、Forward PE 37x 提供真實估值底，不宜追空。<br>▸ 風險提醒：美林出清動機仍是黑盒，若屬內部消息而非季末調倉，833 破位後流動性枯竭，下探 800 無支撐；倉位建議不超過總倉 5%。<br>▸ 與量化分差異說明：量化分 -2.1 對應 SELL，主席分 0 對應 HOLD，差距 2.1 未超過 3，無需強制說明；但主要修正原因為歷史回饋——過去 SELL 訊號勝率 0%，HOLD 勝率 100%，系統性偏空已獲實證，維持 SELL 等同重蹈覆轍。</div>
+      <div class="conclusion-text">SELL<br>CHAIRMAN_SCORE: -4<br><br>▸ 進場區間：觀望，等待 RSI &lt; 30 且出現日 K 底部背離再評估<br>▸ 停損：845（反彈收盤站回則重新評估方向）<br>▸ 中線目標：760（5日-4.8%歷史跌幅延伸，750-760真空帶無支撐）<br>▸ 短線目標：800（整數心理關卡，程式停損觸發區）<br>▸ 理由：今日美林砍 -288,000 股為最大賣方，摩根士丹利雖轉買 +84,628 但規模不足對沖；5日法人累計 -999,630 股，賣超主力換手（從MS到美林）顯示機構撤退並未停歇，只是換人接棒。現價 820 緊貼布林下軌 818，MACD 柱 -11.79 為近期最深，量比 0.77x 代表冷門股無承接而非賣壓衰竭。<br>▸ 風險提醒：MS今日轉買 +84,628 是本次唯一多方訊號，若後續兩天MS持續加碼且美林停賣，格局可能快速翻多；融資追繳與程式停損若同時觸發，跌幅可能比技術面預估更深、反彈也更急，切勿空手追空。<br>▸ 與量化分差異說明：量化 -3，主席 -4，差距 1，無需特別說明。修正方向：我歷史偏空 -1.1，原應上調，但今日美林 -288K 是具體事件驅動，非情緒偏空，故僅微調至 -4 而非 -5。歷史回饋顯示近期 SELL 多為 ❌（SELL 期間股價曾反彈），本次維持 SELL 但降低倉位建議，尊重 MS 轉向的潛在反轉訊號。</div>
     </div>
   </div>
 </div>
@@ -172,7 +172,7 @@
 
 
 <script>
-const priceData = [{"date": "2026-03-25", "price": 896, "rating": "HOLD", "quant": 0, "chairman": 0, "result_price": 896, "return_pct": 0, "correct": 1}, {"date": "2026-03-25", "price": 896, "rating": "HOLD", "quant": 1.8, "chairman": 0, "result_price": 896, "return_pct": 0, "correct": 0}, {"date": "2026-03-25", "price": 896, "rating": "HOLD", "quant": 3.8, "chairman": 0, "result_price": 896, "return_pct": 0, "correct": 0}, {"date": "2026-03-25", "price": 896, "rating": "HOLD", "quant": -0.3, "chairman": 0, "result_price": 896, "return_pct": 0, "correct": 1}, {"date": "2026-03-25", "price": 896, "rating": "HOLD", "quant": -0.1, "chairman": 0, "result_price": 896, "return_pct": 0, "correct": 1}, {"date": "2026-03-25", "price": 896, "rating": "HOLD", "quant": 0.5, "chairman": 0, "result_price": 896, "return_pct": 0, "correct": 1}, {"date": "2026-03-25", "price": 896, "rating": "BUY", "quant": 4.6, "chairman": 5, "result_price": 896, "return_pct": 0, "correct": 0}, {"date": "2026-03-26", "price": 896, "rating": "HOLD", "quant": 0.7, "chairman": 1, "result_price": 887, "return_pct": -1, "correct": 1}, {"date": "2026-03-26", "price": 887, "rating": "SELL", "quant": -2, "chairman": -1, "result_price": 887, "return_pct": 0, "correct": 0}, {"date": "2026-03-26", "price": 887, "rating": "HOLD", "quant": -0.6, "chairman": 1, "result_price": 887, "return_pct": 0, "correct": 1}, {"date": "2026-03-27", "price": 887, "rating": "HOLD", "quant": -2.7, "chairman": -2, "result_price": 865, "return_pct": -2.48, "correct": 1}, {"date": "2026-03-27", "price": 865, "rating": "HOLD", "quant": -0.9, "chairman": -1, "result_price": 865, "return_pct": 0, "correct": 1}, {"date": "2026-03-27", "price": 865, "rating": "SELL", "quant": -3.6, "chairman": -5, "result_price": 865, "return_pct": 0, "correct": 0}, {"date": "2026-03-27", "price": 865, "rating": "SELL", "quant": -1.9, "chairman": -5, "result_price": 865, "return_pct": 0, "correct": 0}, {"date": "2026-03-27", "price": 865, "rating": "SELL", "quant": -2.1, "chairman": -4, "result_price": 865, "return_pct": 0, "correct": 0}, {"date": "2026-03-29", "price": 865, "rating": "HOLD", "quant": -1.5, "chairman": -1, "result_price": 865, "return_pct": 0, "correct": 0}, {"date": "2026-03-29", "price": 865, "rating": "SELL", "quant": -2.2, "chairman": -3, "result_price": 865, "return_pct": 0, "correct": 0}, {"date": "2026-03-29", "price": 865, "rating": "SELL", "quant": -2.5, "chairman": -2, "result_price": 865, "return_pct": 0, "correct": 0}, {"date": "2026-03-30", "price": 865, "rating": "SELL", "quant": -2.1, "chairman": 0}];
+const priceData = [{"date": "2026-03-25", "price": 896, "rating": "HOLD", "quant": 0, "chairman": 0, "result_price": 896, "return_pct": 0, "correct": 1}, {"date": "2026-03-25", "price": 896, "rating": "HOLD", "quant": 1.8, "chairman": 0, "result_price": 896, "return_pct": 0, "correct": 0}, {"date": "2026-03-25", "price": 896, "rating": "HOLD", "quant": 3.8, "chairman": 0, "result_price": 896, "return_pct": 0, "correct": 0}, {"date": "2026-03-25", "price": 896, "rating": "HOLD", "quant": -0.3, "chairman": 0, "result_price": 896, "return_pct": 0, "correct": 1}, {"date": "2026-03-25", "price": 896, "rating": "HOLD", "quant": -0.1, "chairman": 0, "result_price": 896, "return_pct": 0, "correct": 1}, {"date": "2026-03-25", "price": 896, "rating": "HOLD", "quant": 0.5, "chairman": 0, "result_price": 896, "return_pct": 0, "correct": 1}, {"date": "2026-03-25", "price": 896, "rating": "BUY", "quant": 4.6, "chairman": 5, "result_price": 896, "return_pct": 0, "correct": 0}, {"date": "2026-03-26", "price": 896, "rating": "HOLD", "quant": 0.7, "chairman": 1, "result_price": 887, "return_pct": -1, "correct": 1}, {"date": "2026-03-26", "price": 887, "rating": "SELL", "quant": -2, "chairman": -1, "result_price": 887, "return_pct": 0, "correct": 0}, {"date": "2026-03-26", "price": 887, "rating": "HOLD", "quant": -0.6, "chairman": 1, "result_price": 887, "return_pct": 0, "correct": 1}, {"date": "2026-03-27", "price": 887, "rating": "HOLD", "quant": -2.7, "chairman": -2, "result_price": 865, "return_pct": -2.48, "correct": 1}, {"date": "2026-03-27", "price": 865, "rating": "HOLD", "quant": -0.9, "chairman": -1, "result_price": 865, "return_pct": 0, "correct": 1}, {"date": "2026-03-27", "price": 865, "rating": "SELL", "quant": -3.6, "chairman": -5, "result_price": 865, "return_pct": 0, "correct": 0}, {"date": "2026-03-27", "price": 865, "rating": "SELL", "quant": -1.9, "chairman": -5, "result_price": 865, "return_pct": 0, "correct": 0}, {"date": "2026-03-27", "price": 865, "rating": "SELL", "quant": -2.1, "chairman": -4, "result_price": 865, "return_pct": 0, "correct": 0}, {"date": "2026-03-29", "price": 865, "rating": "HOLD", "quant": -1.5, "chairman": -1, "result_price": 865, "return_pct": 0, "correct": 0}, {"date": "2026-03-29", "price": 865, "rating": "SELL", "quant": -2.2, "chairman": -3, "result_price": 865, "return_pct": 0, "correct": 0}, {"date": "2026-03-29", "price": 865, "rating": "SELL", "quant": -2.5, "chairman": -2, "result_price": 865, "return_pct": 0, "correct": 0}, {"date": "2026-03-30", "price": 865, "rating": "SELL", "quant": -2.1, "chairman": 0}, {"date": "2026-03-30", "price": 865, "rating": "HOLD", "quant": -1.4, "chairman": -1}, {"date": "2026-03-30", "price": 865, "rating": "HOLD", "quant": -0.3, "chairman": 2}, {"date": "2026-03-30", "price": 820, "rating": "SELL", "quant": -3, "chairman": -4}];
 
 // Price chart with rating markers
 const dates = priceData.map(d => d.date);
@@ -227,7 +227,7 @@ Plotly.newPlot('scoreChart', [
 </script>
 
 <footer>
-  496Claw 財務分析室 v2 • RAG Controller • Generated 2026-03-30 00:09
+  496Claw 財務分析室 v2 • RAG Controller • Generated 2026-03-30 18:37
 </footer>
 
 </div>
