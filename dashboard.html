@@ -108,7 +108,18 @@
       <td><a class="link" href="latest_3081_TWO.html">📄</a></td>
     </tr>
     <tr>
-      <td><strong style="color:#3fb950">4772</strong><br><span style="color:var(--muted);font-size:12px">4772.TWO</span></td>
+      <td><strong style="color:#3fb950">7887</strong><br><span style="color:var(--muted);font-size:12px">7887.TWO</span></td>
+      <td>$160.5</td>
+      <td><span class="score positive">+0.7</span><span class="trend-spark trend-up">▲</span></td>
+      <td><span class="score neutral">0</span></td>
+      <td><span class="rating-pill" style="background:#9E9E9E">持有</span></td>
+      <td><span class="accuracy positive">100%</span> <span style="color:var(--muted);font-size:11px">(1筆)</span></td>
+      <td>4</td>
+      <td>2026-04-09</td>
+      <td><a class="link" href="latest_7887_TWO.html">📄</a></td>
+    </tr>
+    <tr>
+      <td><strong style="color:#d29922">4772</strong><br><span style="color:var(--muted);font-size:12px">4772.TWO</span></td>
       <td>$292.5</td>
       <td><span class="score positive">+0.5</span><span class="trend-spark trend-up">▲</span></td>
       <td><span class="score neutral">0</span></td>
@@ -117,17 +128,6 @@
       <td>7</td>
       <td>2026-04-09</td>
       <td><a class="link" href="latest_4772_TWO.html">📄</a></td>
-    </tr>
-    <tr>
-      <td><strong style="color:#d29922">7887</strong><br><span style="color:var(--muted);font-size:12px">7887.TWO</span></td>
-      <td>$160.5</td>
-      <td><span class="score negative">-0.1</span><span class="trend-spark trend-up">▲</span></td>
-      <td><span class="score neutral">0</span></td>
-      <td><span class="rating-pill" style="background:#9E9E9E">持有</span></td>
-      <td><span class="accuracy positive">100%</span> <span style="color:var(--muted);font-size:11px">(1筆)</span></td>
-      <td>3</td>
-      <td>2026-04-09</td>
-      <td><a class="link" href="latest_7887_TWO.html">📄</a></td>
     </tr>
     <tr>
       <td><strong style="color:#f0883e">新應材</strong><br><span style="color:var(--muted);font-size:12px">4749.TWO</span></td>
@@ -234,7 +234,7 @@ const scoreTraces = [
   { x: ["2026-03-30", "2026-04-06", "2026-04-08"], y: [3.5, 1.3, 1.7], type: 'scatter', mode: 'lines+markers', name: '聯亞', line: { color: '#e3b341', width: 2 }, marker: { size: 4 } },
   { x: ["2026-03-31", "2026-03-31", "2026-04-07", "2026-04-09"], y: [-5.3, -4.7, -2.4, -1.4], type: 'scatter', mode: 'lines+markers', name: '5234', line: { color: '#b392f0', width: 2 }, marker: { size: 4 } },
   { x: ["2026-03-31", "2026-03-31", "2026-04-06", "2026-04-07", "2026-04-08"], y: [-6.2, -5.4, -2.5, -0.9, -0.7], type: 'scatter', mode: 'lines+markers', name: '0050', line: { color: '#85e89d', width: 2 }, marker: { size: 4 } },
-  { x: ["2026-04-07", "2026-04-09", "2026-04-09"], y: [-1.8, -0.9, -0.1], type: 'scatter', mode: 'lines+markers', name: '7887', line: { color: '#58a6ff', width: 2 }, marker: { size: 4 } },
+  { x: ["2026-04-07", "2026-04-09", "2026-04-09", "2026-04-09"], y: [-1.8, -0.9, -0.1, 0.7], type: 'scatter', mode: 'lines+markers', name: '7887', line: { color: '#58a6ff', width: 2 }, marker: { size: 4 } },
 ];
 
 Plotly.newPlot('scoreCurves', scoreTraces, {
@@ -260,7 +260,7 @@ const priceTraces = [
   { x: ["2026-03-30", "2026-04-06", "2026-04-08"], y: [0.0, 6.1, 16.57], type: 'scatter', mode: 'lines', name: '聯亞', line: { color: '#e3b341', width: 2 } },
   { x: ["2026-03-31", "2026-03-31", "2026-04-07", "2026-04-09"], y: [0.0, 0.0, 4.54, 14.79], type: 'scatter', mode: 'lines', name: '5234', line: { color: '#b392f0', width: 2 } },
   { x: ["2026-03-31", "2026-03-31", "2026-04-06", "2026-04-07", "2026-04-08"], y: [0.0, 0.0, 0.07, 0.07, 1.89], type: 'scatter', mode: 'lines', name: '0050', line: { color: '#85e89d', width: 2 } },
-  { x: ["2026-04-07", "2026-04-09", "2026-04-09"], y: [0.0, 2.99, 6.64], type: 'scatter', mode: 'lines', name: '7887', line: { color: '#58a6ff', width: 2 } },
+  { x: ["2026-04-07", "2026-04-09", "2026-04-09", "2026-04-09"], y: [0.0, 2.99, 6.64, 6.64], type: 'scatter', mode: 'lines', name: '7887', line: { color: '#58a6ff', width: 2 } },
 ];
 
 Plotly.newPlot('priceCurves', priceTraces, {
