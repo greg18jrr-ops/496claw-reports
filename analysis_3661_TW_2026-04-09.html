@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>496Claw 財務分析 — 世芯 2026-04-09</title>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<style>
+  :root {
+    --bg: #0d1117; --card: #161b22; --border: #30363d;
+    --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff;
+    --green: #3fb950; --red: #f85149; --yellow: #d29922;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 20px; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .header { text-align: center; margin-bottom: 30px; padding: 20px; background: var(--card); border-radius: 12px; border: 1px solid var(--border); }
+  .header h1 { font-size: 28px; margin-bottom: 8px; }
+  .header .meta { color: var(--muted); font-size: 14px; }
+  .rating-badge {
+    display: inline-block; padding: 8px 24px; border-radius: 20px; font-size: 18px; font-weight: bold;
+    color: white; margin: 10px 0;
+    background: #9E9E9E;
+  }
+  .scores { display: flex; gap: 20px; justify-content: center; margin: 15px 0; }
+  .score-box { background: var(--bg); padding: 12px 20px; border-radius: 8px; text-align: center; }
+  .score-box .label { color: var(--muted); font-size: 12px; }
+  .score-box .value { font-size: 24px; font-weight: bold; }
+  .section { background: var(--card); border-radius: 12px; border: 1px solid var(--border); margin-bottom: 20px; overflow: hidden; }
+  .section-header { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px; cursor: pointer; }
+  .section-header h2 { font-size: 18px; }
+  .section-body { padding: 20px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .card { background: var(--bg); border-radius: 8px; padding: 16px; }
+  .card h3 { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+  .vote-table { width: 100%; border-collapse: collapse; }
+  .vote-table th, .vote-table td { padding: 8px 12px; text-align: center; border-bottom: 1px solid var(--border); }
+  .vote-table th { color: var(--muted); font-size: 12px; }
+  .positive { color: var(--green); }
+  .negative { color: var(--red); }
+  .neutral { color: var(--muted); }
+  .thompson-bar { display: flex; height: 24px; border-radius: 4px; overflow: hidden; margin: 8px 0; }
+  .thompson-bar div { display: flex; align-items: center; justify-content: center; font-size: 11px; color: white; }
+  .conclusion-text { white-space: pre-wrap; line-height: 1.8; font-size: 15px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin: 2px; }
+  .tag-green { background: rgba(63,185,80,0.2); color: var(--green); }
+  .tag-red { background: rgba(248,81,73,0.2); color: var(--red); }
+  .tag-blue { background: rgba(88,166,255,0.2); color: var(--accent); }
+  .chart-container { width: 100%; height: 400px; }
+  .stat { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--border); }
+  .stat:last-child { border: none; }
+  .discussion-entry { margin-bottom: 12px; padding: 12px; background: var(--bg); border-radius: 8px; }
+  .discussion-entry .role { font-weight: bold; margin-bottom: 4px; }
+  .accuracy-big { font-size: 48px; font-weight: bold; text-align: center; }
+  footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 30px; padding: 20px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header">
+  <h1>📊 世芯 (3661.TW)</h1>
+  <div class="meta">2026-04-09 • 496Claw 財務分析室</div>
+  <div class="rating-badge">持有</div>
+  <div class="scores">
+    <div class="score-box">
+      <div class="label">Quant Score</div>
+      <div class="value negative">-2.1</div>
+    </div>
+    <div class="score-box">
+      <div class="label">Chairman Score</div>
+      <div class="value neutral">0</div>
+    </div>
+    <div class="score-box">
+      <div class="label">歷史準確率</div>
+      <div class="value negative">—</div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 1: RAG Info -->
+<div class="section">
+  <div class="section-header" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'">
+    <h2>🧠 RAG 系統資訊</h2>
+  </div>
+  <div class="section-body">
+    <div class="grid">
+      <div class="card">
+        <h3>Thompson Sampling 權重</h3>
+        <div class="thompson-bar">
+          <div style="width:35.6%;background:#58a6ff">小克勞 36%</div>
+          <div style="width:33.8%;background:#f97583">小龍蝦 34%</div>
+          <div style="width:25.6%;background:#d2a8ff">小飛俠 26%</div>
+          <div style="width:4.9%;background:#3fb950">阿德 5%</div>
+        </div>
+        <div style="margin-top: 12px;">          <div class="stat"><span>小克勞</span><span>勝率 49%（1716.40517460317 次）</span></div>
+          <div class="stat"><span>小龍蝦</span><span>勝率 50%（1710.327682539675 次）</span></div>
+          <div class="stat"><span>小飛俠</span><span>勝率 48%（1737.5406031745974 次）</span></div>
+          <div class="stat"><span>阿德</span><span>勝率 49%（1802.6027777777613 次）</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>數據覆蓋</h3>
+        <div class="stat"><span>歷史分析</span><span>1 筆</span></div>
+        <div class="stat"><span>已驗證</span><span>0 筆</span></div>
+        <div class="stat"><span>準確率</span><span>—</span></div>
+        <div class="stat"><span>微調數據</span><span>讀取中...</span></div>
+      </div>
+      <div class="card">
+        <h3>知識圖譜</h3>
+        <div class="stat"><span>產業</span><span>—</span></div>
+        <div class="stat"><span>供應鏈位置</span><span>—</span></div>
+        <div class="stat"><span>競爭者</span><span>—</span></div>
+        <div class="stat"><span>總經驅動</span><span></span></div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Section 2: Main Analysis -->
+<div class="section">
+  <div class="section-header" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'">
+    <h2>📋 分析主體</h2>
+  </div>
+  <div class="section-body">
+    <div class="card" style="margin-bottom:16px">
+      <h3>投票 Scorecard</h3>
+      <table class="vote-table">
+        <tr><th></th><th>技術</th><th>基本面</th><th>情緒</th><th>🎲 權重</th></tr>
+        <tr><td><strong>小克勞</strong></td><td><span class="positive">+2</span></td><td><span class="negative">-7</span></td><td><span class="positive">+2</span></td><td>35.6%</td></tr>
+        <tr><td><strong>小龍蝦</strong></td><td><span class="negative">-2</span></td><td><span class="negative">-5</span></td><td><span class="negative">-2</span></td><td>33.8%</td></tr>
+        <tr><td><strong>小飛俠</strong></td><td><span class="negative">-3</span></td><td><span class="negative">-6</span></td><td><span class="neutral">0</span></td><td>25.6%</td></tr>
+        <tr><td><strong>阿德</strong></td><td><span class="positive">+2</span></td><td><span class="positive">+6</span></td><td><span class="positive">+1</span></td><td>4.9%</td></tr>
+        <tr style="border-top:2px solid var(--border)"><td><strong>加權</strong></td><td><strong>-0.6</strong></td><td><strong>-5.4</strong></td><td><strong>0.1</strong></td><td></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Section 3: Performance Tracking -->
+<div class="section">
+  <div class="section-header" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'">
+    <h2>📈 績效追蹤</h2>
+  </div>
+  <div class="section-body">
+    <div class="chart-container" id="priceChart"></div>
+    <div class="chart-container" id="scoreChart" style="margin-top:20px"></div>
+  </div>
+</div>
+
+
+<script>
+const priceData = [{"date": "2026-04-09", "price": 2895, "rating": "HOLD", "quant": -2.1, "chairman": 0}];
+
+// Price chart with rating markers
+const dates = priceData.map(d => d.date);
+const prices = priceData.map(d => d.price);
+
+const buyDates = priceData.filter(d => d.rating === 'BUY' || d.rating === 'STRONG_BUY').map(d => d.date);
+const buyPrices = priceData.filter(d => d.rating === 'BUY' || d.rating === 'STRONG_BUY').map(d => d.price);
+const sellDates = priceData.filter(d => d.rating === 'SELL' || d.rating === 'STRONG_SELL').map(d => d.date);
+const sellPrices = priceData.filter(d => d.rating === 'SELL' || d.rating === 'STRONG_SELL').map(d => d.price);
+const holdDates = priceData.filter(d => d.rating === 'HOLD').map(d => d.date);
+const holdPrices = priceData.filter(d => d.rating === 'HOLD').map(d => d.price);
+
+const correctDates = priceData.filter(d => d.correct === 1).map(d => d.date);
+const correctPrices = priceData.filter(d => d.correct === 1).map(d => d.price);
+const wrongDates = priceData.filter(d => d.correct === 0).map(d => d.date);
+const wrongPrices = priceData.filter(d => d.correct === 0).map(d => d.price);
+
+Plotly.newPlot('priceChart', [
+  { x: dates, y: prices, type: 'scatter', mode: 'lines', name: '股價', line: { color: '#58a6ff', width: 2 } },
+  { x: buyDates, y: buyPrices, type: 'scatter', mode: 'markers', name: 'BUY', marker: { color: '#3fb950', size: 12, symbol: 'triangle-up' } },
+  { x: sellDates, y: sellPrices, type: 'scatter', mode: 'markers', name: 'SELL', marker: { color: '#f85149', size: 12, symbol: 'triangle-down' } },
+  { x: holdDates, y: holdPrices, type: 'scatter', mode: 'markers', name: 'HOLD', marker: { color: '#8b949e', size: 8, symbol: 'circle' } },
+  { x: correctDates, y: correctPrices, type: 'scatter', mode: 'markers', name: '✅ 正確', marker: { color: '#3fb950', size: 16, symbol: 'circle-open', line: { width: 3 } } },
+  { x: wrongDates, y: wrongPrices, type: 'scatter', mode: 'markers', name: '❌ 錯誤', marker: { color: '#f85149', size: 16, symbol: 'x', line: { width: 3 } } },
+], {
+  title: '世芯 股價走勢 + 評等標記',
+  paper_bgcolor: '#0d1117', plot_bgcolor: '#0d1117',
+  font: { color: '#e6edf3' },
+  xaxis: { gridcolor: '#30363d' },
+  yaxis: { gridcolor: '#30363d', title: '股價' },
+  legend: { bgcolor: 'rgba(0,0,0,0)' },
+  margin: { l: 60, r: 20, t: 40, b: 40 },
+}, { responsive: true });
+
+// Score chart
+const quants = priceData.map(d => d.quant || 0);
+const chairmans = priceData.map(d => d.chairman || 0);
+
+Plotly.newPlot('scoreChart', [
+  { x: dates, y: quants, type: 'bar', name: 'Quant Score', marker: { color: quants.map(v => v > 0 ? '#3fb950' : '#f85149') } },
+  { x: dates, y: chairmans, type: 'scatter', mode: 'lines+markers', name: 'Chairman Score', line: { color: '#d29922', width: 2 }, marker: { size: 6 } },
+], {
+  title: 'Quant Score vs Chairman Score',
+  paper_bgcolor: '#0d1117', plot_bgcolor: '#0d1117',
+  font: { color: '#e6edf3' },
+  xaxis: { gridcolor: '#30363d' },
+  yaxis: { gridcolor: '#30363d', title: '分數', range: [-10, 10] },
+  legend: { bgcolor: 'rgba(0,0,0,0)' },
+  margin: { l: 60, r: 20, t: 40, b: 40 },
+  barmode: 'relative',
+}, { responsive: true });
+</script>
+
+<footer>
+  496Claw 財務分析室 v2 • RAG Controller • Generated 2026-04-09 18:57
+</footer>
+
+</div>
+</body>
+</html>
