@@ -66,7 +66,7 @@
   <div class="scores">
     <div class="score-box">
       <div class="label">Quant Score</div>
-      <div class="value positive">+4.7</div>
+      <div class="value positive">+4.3</div>
     </div>
     <div class="score-box">
       <div class="label">Chairman Score</div>
@@ -89,10 +89,10 @@
       <div class="card">
         <h3>Thompson Sampling 權重</h3>
         <div class="thompson-bar">
-          <div style="width:23.2%;background:#58a6ff">小克勞 23%</div>
-          <div style="width:27.9%;background:#f97583">小龍蝦 28%</div>
-          <div style="width:25.0%;background:#d2a8ff">小飛俠 25%</div>
-          <div style="width:23.9%;background:#3fb950">阿德 24%</div>
+          <div style="width:25.5%;background:#58a6ff">小克勞 26%</div>
+          <div style="width:26.3%;background:#f97583">小龍蝦 26%</div>
+          <div style="width:25.4%;background:#d2a8ff">小飛俠 25%</div>
+          <div style="width:22.8%;background:#3fb950">阿德 23%</div>
         </div>
         <div style="margin-top: 12px;">          <div class="stat"><span>小克勞</span><span>勝率 49%（1716.40517460317 次）</span></div>
           <div class="stat"><span>小龍蝦</span><span>勝率 50%（1710.327682539675 次）</span></div>
@@ -102,7 +102,7 @@
       </div>
       <div class="card">
         <h3>數據覆蓋</h3>
-        <div class="stat"><span>歷史分析</span><span>12 筆</span></div>
+        <div class="stat"><span>歷史分析</span><span>13 筆</span></div>
         <div class="stat"><span>已驗證</span><span>10 筆</span></div>
         <div class="stat"><span>準確率</span><span>50%</span></div>
         <div class="stat"><span>微調數據</span><span>讀取中...</span></div>
@@ -129,11 +129,11 @@
       <h3>投票 Scorecard</h3>
       <table class="vote-table">
         <tr><th></th><th>技術</th><th>基本面</th><th>情緒</th><th>🎲 權重</th></tr>
-        <tr><td><strong>小克勞</strong></td><td><span class="positive">+7</span></td><td><span class="positive">+8</span></td><td><span class="positive">+5</span></td><td>23.2%</td></tr>
-        <tr><td><strong>小龍蝦</strong></td><td><span class="positive">+7</span></td><td><span class="positive">+8</span></td><td><span class="positive">+5</span></td><td>27.9%</td></tr>
-        <tr><td><strong>小飛俠</strong></td><td><span class="positive">+7</span></td><td><span class="positive">+7</span></td><td><span class="neutral">0</span></td><td>25.0%</td></tr>
-        <tr><td><strong>阿德</strong></td><td><span class="neutral">0</span></td><td><span class="neutral">0</span></td><td><span class="neutral">0</span></td><td>23.9%</td></tr>
-        <tr style="border-top:2px solid var(--border)"><td><strong>加權</strong></td><td><strong>5.3</strong></td><td><strong>5.8</strong></td><td><strong>2.6</strong></td><td></td></tr>
+        <tr><td><strong>小克勞</strong></td><td><span class="positive">+6</span></td><td><span class="positive">+7</span></td><td><span class="positive">+6</span></td><td>25.5%</td></tr>
+        <tr><td><strong>小龍蝦</strong></td><td><span class="positive">+5</span></td><td><span class="positive">+6</span></td><td><span class="positive">+7</span></td><td>26.3%</td></tr>
+        <tr><td><strong>小飛俠</strong></td><td><span class="positive">+5</span></td><td><span class="positive">+7</span></td><td><span class="neutral">0</span></td><td>25.4%</td></tr>
+        <tr><td><strong>阿德</strong></td><td><span class="neutral">0</span></td><td><span class="neutral">0</span></td><td><span class="neutral">0</span></td><td>22.8%</td></tr>
+        <tr style="border-top:2px solid var(--border)"><td><strong>加權</strong></td><td><strong>4.1</strong></td><td><strong>5.1</strong></td><td><strong>3.4</strong></td><td></td></tr>
       </table>
     </div>
   </div>
@@ -152,7 +152,7 @@
 
 
 <script>
-const priceData = [{"date": "2026-03-30", "price": 1820, "rating": "HOLD", "quant": 0.6, "chairman": 1, "result_price": 1780, "return_pct": -2.2, "correct": 0}, {"date": "2026-03-31", "price": 1780, "rating": "SELL", "quant": -1.5, "chairman": -4, "result_price": 1760, "return_pct": -1.12, "correct": 1}, {"date": "2026-03-31", "price": 1780, "rating": "SELL", "quant": -2.3, "chairman": -4, "result_price": 1760, "return_pct": -1.12, "correct": 1}, {"date": "2026-04-02", "price": 1855, "rating": "HOLD", "quant": -0.6, "chairman": 1, "result_price": 1810, "return_pct": -2.43, "correct": 0}, {"date": "2026-04-02", "price": 1855, "rating": "HOLD", "quant": 0.1, "chairman": 1, "result_price": 1810, "return_pct": -2.43, "correct": 0}, {"date": "2026-04-03", "price": 1810, "rating": "SELL", "quant": -0.4, "chairman": -4, "result_price": 1810, "return_pct": 0, "correct": 1}, {"date": "2026-04-03", "price": 1810, "rating": "SELL", "quant": -0.8, "chairman": -3, "result_price": 1810, "return_pct": 0, "correct": 1}, {"date": "2026-04-06", "price": 1810, "rating": "HOLD", "quant": -1.7, "chairman": 0, "result_price": 1810, "return_pct": 0, "correct": 0}, {"date": "2026-04-07", "price": 1810, "rating": "HOLD", "quant": 0.9, "chairman": 0, "result_price": 1860, "return_pct": 2.76, "correct": 0}, {"date": "2026-04-08", "price": 1860, "rating": "HOLD", "quant": 3.7, "chairman": 0, "result_price": 1950, "return_pct": 4.84, "correct": 1}, {"date": "2026-04-09", "price": 1950, "rating": "HOLD", "quant": 4.3, "chairman": 0}, {"date": "2026-04-09", "price": 1955, "rating": "HOLD", "quant": 4.7, "chairman": 0}];
+const priceData = [{"date": "2026-03-30", "price": 1820, "rating": "HOLD", "quant": 0.6, "chairman": 1, "result_price": 1780, "return_pct": -2.2, "correct": 0}, {"date": "2026-03-31", "price": 1780, "rating": "SELL", "quant": -1.5, "chairman": -4, "result_price": 1760, "return_pct": -1.12, "correct": 1}, {"date": "2026-03-31", "price": 1780, "rating": "SELL", "quant": -2.3, "chairman": -4, "result_price": 1760, "return_pct": -1.12, "correct": 1}, {"date": "2026-04-02", "price": 1855, "rating": "HOLD", "quant": -0.6, "chairman": 1, "result_price": 1810, "return_pct": -2.43, "correct": 0}, {"date": "2026-04-02", "price": 1855, "rating": "HOLD", "quant": 0.1, "chairman": 1, "result_price": 1810, "return_pct": -2.43, "correct": 0}, {"date": "2026-04-03", "price": 1810, "rating": "SELL", "quant": -0.4, "chairman": -4, "result_price": 1810, "return_pct": 0, "correct": 1}, {"date": "2026-04-03", "price": 1810, "rating": "SELL", "quant": -0.8, "chairman": -3, "result_price": 1810, "return_pct": 0, "correct": 1}, {"date": "2026-04-06", "price": 1810, "rating": "HOLD", "quant": -1.7, "chairman": 0, "result_price": 1810, "return_pct": 0, "correct": 0}, {"date": "2026-04-07", "price": 1810, "rating": "HOLD", "quant": 0.9, "chairman": 0, "result_price": 1860, "return_pct": 2.76, "correct": 0}, {"date": "2026-04-08", "price": 1860, "rating": "HOLD", "quant": 3.7, "chairman": 0, "result_price": 1950, "return_pct": 4.84, "correct": 1}, {"date": "2026-04-09", "price": 1950, "rating": "HOLD", "quant": 4.3, "chairman": 0}, {"date": "2026-04-09", "price": 1955, "rating": "HOLD", "quant": 4.7, "chairman": 0}, {"date": "2026-04-09", "price": 1955, "rating": "HOLD", "quant": 4.3, "chairman": 0}];
 
 // Price chart with rating markers
 const dates = priceData.map(d => d.date);
@@ -207,7 +207,7 @@ Plotly.newPlot('scoreChart', [
 </script>
 
 <footer>
-  496Claw 財務分析室 v2 • RAG Controller • Generated 2026-04-09 18:49
+  496Claw 財務分析室 v2 • RAG Controller • Generated 2026-04-09 18:51
 </footer>
 
 </div>
