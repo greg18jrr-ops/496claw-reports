@@ -89,10 +89,10 @@
       <div class="card">
         <h3>Thompson Sampling 權重</h3>
         <div class="thompson-bar">
-          <div style="width:26.5%;background:#58a6ff">小克勞 26%</div>
-          <div style="width:24.4%;background:#f97583">小龍蝦 24%</div>
-          <div style="width:21.4%;background:#d2a8ff">小飛俠 21%</div>
-          <div style="width:27.8%;background:#3fb950">阿德 28%</div>
+          <div style="width:25.1%;background:#58a6ff">小克勞 25%</div>
+          <div style="width:24.9%;background:#f97583">小龍蝦 25%</div>
+          <div style="width:25.8%;background:#d2a8ff">小飛俠 26%</div>
+          <div style="width:24.3%;background:#3fb950">阿德 24%</div>
         </div>
         <div style="margin-top: 12px;">          <div class="stat"><span>小克勞</span><span>勝率 47%（2000.6180952380844 次）</span></div>
           <div class="stat"><span>小龍蝦</span><span>勝率 48%（2003.0229523809382 次）</span></div>
@@ -102,7 +102,7 @@
       </div>
       <div class="card">
         <h3>數據覆蓋</h3>
-        <div class="stat"><span>歷史分析</span><span>7 筆</span></div>
+        <div class="stat"><span>歷史分析</span><span>8 筆</span></div>
         <div class="stat"><span>已驗證</span><span>6 筆</span></div>
         <div class="stat"><span>準確率</span><span>33%</span></div>
         <div class="stat"><span>微調數據</span><span>讀取中...</span></div>
@@ -147,11 +147,11 @@
       <h3>投票 Scorecard</h3>
       <table class="vote-table">
         <tr><th></th><th>技術</th><th>基本面</th><th>情緒</th><th>🎲 權重</th></tr>
-        <tr><td><strong>小克勞</strong></td><td><span class="positive">+4</span></td><td><span class="negative">-5</span></td><td><span class="negative">-3</span></td><td>26.5%</td></tr>
-        <tr><td><strong>小龍蝦</strong></td><td><span class="positive">+3</span></td><td><span class="negative">-5</span></td><td><span class="negative">-1</span></td><td>24.4%</td></tr>
-        <tr><td><strong>小飛俠</strong></td><td><span class="positive">+2</span></td><td><span class="negative">-6</span></td><td><span class="negative">-4</span></td><td>21.4%</td></tr>
-        <tr><td><strong>阿德</strong></td><td><span class="neutral">0</span></td><td><span class="neutral">0</span></td><td><span class="neutral">0</span></td><td>27.8%</td></tr>
-        <tr style="border-top:2px solid var(--border)"><td><strong>加權</strong></td><td><strong>2.2</strong></td><td><strong>-3.8</strong></td><td><strong>-1.9</strong></td><td></td></tr>
+        <tr><td><strong>小克勞</strong></td><td><span class="negative">-3</span></td><td><span class="negative">-7</span></td><td><span class="neutral">0</span></td><td>25.1%</td></tr>
+        <tr><td><strong>小龍蝦</strong></td><td><span class="positive">+2</span></td><td><span class="negative">-7</span></td><td><span class="negative">-2</span></td><td>24.9%</td></tr>
+        <tr><td><strong>小飛俠</strong></td><td><span class="positive">+2</span></td><td><span class="negative">-6</span></td><td><span class="positive">+1</span></td><td>25.8%</td></tr>
+        <tr><td><strong>阿德</strong></td><td><span class="neutral">0</span></td><td><span class="neutral">0</span></td><td><span class="neutral">0</span></td><td>24.3%</td></tr>
+        <tr style="border-top:2px solid var(--border)"><td><strong>加權</strong></td><td><strong>0.3</strong></td><td><strong>-5</strong></td><td><strong>-0.2</strong></td><td></td></tr>
       </table>
     </div>
   </div>
@@ -170,7 +170,7 @@
 
 
 <script>
-const priceData = [{"date": "2026-03-27", "price": 466, "rating": "SELL", "quant": -1.9, "chairman": -4, "result_price": 486, "return_pct": 4.29, "correct": 0}, {"date": "2026-03-31", "price": 470, "rating": "SELL", "quant": -3.6, "chairman": -4, "result_price": 435.5, "return_pct": -7.34, "correct": 1}, {"date": "2026-03-31", "price": 470, "rating": "SELL", "quant": -3.4, "chairman": -5, "result_price": 435.5, "return_pct": -7.34, "correct": 1}, {"date": "2026-04-09", "price": 469, "rating": "HOLD", "quant": -1.1, "chairman": 0, "result_price": 469, "return_pct": 0, "correct": 0}, {"date": "2026-04-09", "price": 469, "rating": "HOLD", "quant": -1.2, "chairman": 0, "result_price": 469, "return_pct": 0, "correct": 0}, {"date": "2026-04-09", "price": 469, "rating": "HOLD", "quant": -2.2, "chairman": 0, "result_price": 469, "return_pct": 0, "correct": 0}, {"date": "2026-04-10", "price": 482, "rating": "HOLD", "quant": -1, "chairman": 0}];
+const priceData = [{"date": "2026-03-27", "price": 466, "rating": "SELL", "quant": -1.9, "chairman": -4, "result_price": 486, "return_pct": 4.29, "correct": 0}, {"date": "2026-03-31", "price": 470, "rating": "SELL", "quant": -3.6, "chairman": -4, "result_price": 435.5, "return_pct": -7.34, "correct": 1}, {"date": "2026-03-31", "price": 470, "rating": "SELL", "quant": -3.4, "chairman": -5, "result_price": 435.5, "return_pct": -7.34, "correct": 1}, {"date": "2026-04-09", "price": 469, "rating": "HOLD", "quant": -1.1, "chairman": 0, "result_price": 469, "return_pct": 0, "correct": 0}, {"date": "2026-04-09", "price": 469, "rating": "HOLD", "quant": -1.2, "chairman": 0, "result_price": 469, "return_pct": 0, "correct": 0}, {"date": "2026-04-09", "price": 469, "rating": "HOLD", "quant": -2.2, "chairman": 0, "result_price": 469, "return_pct": 0, "correct": 0}, {"date": "2026-04-10", "price": 482, "rating": "HOLD", "quant": -1, "chairman": 0}, {"date": "2026-04-10", "price": 482, "rating": "HOLD", "quant": -1, "chairman": 0}];
 
 // Price chart with rating markers
 const dates = priceData.map(d => d.date);
@@ -225,7 +225,7 @@ Plotly.newPlot('scoreChart', [
 </script>
 
 <footer>
-  496Claw 財務分析室 v2 • RAG Controller • Generated 2026-04-10 18:39
+  496Claw 財務分析室 v2 • RAG Controller • Generated 2026-04-10 18:42
 </footer>
 
 </div>
